@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.aspectj.weaver.ast.Or;
 
 import java.math.BigDecimal;
 
@@ -20,4 +21,8 @@ public class OrderItem {
     private Long id;
     private int quantity;
     private BigDecimal priceAtPurchase;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 }
