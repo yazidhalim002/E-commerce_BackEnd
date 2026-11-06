@@ -5,13 +5,13 @@ import com.ecommerce.ecommerce.DTO.OrderDto;
 import java.util.List;
 
 public interface OrderService {
-    List<OrderDto> getAllProducts();
+    List<OrderDto> getAllOrders();
 
-    OrderDto getProductById(Long id);
+    OrderDto getOrderById(Long id);
 
-    OrderDto addProduct(OrderDto OrderDTO);
+    OrderDto addOrder(OrderDto OrderDTO);
 
-    OrderDto updateProduct(Long id, OrderDto OrderDTO);
+    OrderDto updateOrder(Long id, OrderDto OrderDTO);
 
-    void deleteProduct(Long id);
+    void deleteOrder(Long id);
 }

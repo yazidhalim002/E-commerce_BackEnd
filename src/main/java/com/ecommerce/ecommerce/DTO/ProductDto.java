@@ -1,6 +1,7 @@
 package com.ecommerce.ecommerce.DTO;
 
 
+import com.ecommerce.ecommerce.Model.Category;
 import lombok.*;
 import java.math.BigDecimal;
 
@@ -14,5 +15,5 @@ public class ProductDto {
     private String description;
     private BigDecimal price;
     private Integer stockQuantity;
-    private String categoryName;
+    private Category category;
 }

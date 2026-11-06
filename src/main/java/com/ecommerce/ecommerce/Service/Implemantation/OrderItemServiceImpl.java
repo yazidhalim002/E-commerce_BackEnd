@@ -8,28 +8,29 @@ import java.util.List;
 
 @Service
 public class OrderItemServiceImpl implements OrderItemService {
+
     @Override
-    public List<OrderItemDto> getAllProducts() {
+    public List<OrderItemDto> getAllOrderItems() {
         return List.of();
     }
 
     @Override
-    public OrderItemDto getProductById(Long id) {
+    public OrderItemDto getOrderItemById(Long id) {
         return null;
     }
 
     @Override
-    public OrderItemDto addProduct(OrderItemDto OrderItemDTO) {
+    public OrderItemDto addOrderItem(OrderItemDto OrderItemDTO) {
         return null;
     }
 
     @Override
-    public OrderItemDto updateProduct(Long id, OrderItemDto OrderItemDTO) {
+    public OrderItemDto updateOrderItem(Long id, OrderItemDto OrderItemDTO) {
         return null;
     }
 
     @Override
-    public void deleteProduct(Long id) {
+    public void deleteOrderItem(Long id) {
 
     }
 }

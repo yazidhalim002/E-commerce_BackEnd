@@ -5,13 +5,13 @@ import com.ecommerce.ecommerce.DTO.CategoryDto;
 import java.util.List;
 
 public interface CategoryService {
-    List<CategoryDto> getAllProducts();
+    List<CategoryDto> getAllCategories();
 
-    CategoryDto getProductById(Long id);
+    CategoryDto getCategoryById(Long id);
 
-    CategoryDto addProduct(CategoryDto CategoryDTO);
+    CategoryDto addCategory(CategoryDto CategoryDTO);
 
-    CategoryDto updateProduct(Long id, CategoryDto CategoryDTO);
+    CategoryDto updateCategory(Long id, CategoryDto CategoryDTO);
 
-    void deleteProduct(Long id);
+    void deleteCategory(Long id);
 }

@@ -5,13 +5,13 @@ import com.ecommerce.ecommerce.DTO.CartItemDto;
 import java.util.List;
 
 public interface CartItemService {
-    List<CartItemDto> getAllProducts();
+    List<CartItemDto> getAllCartItems();
 
-    CartItemDto getProductById(Long id);
+    CartItemDto getCartItemById(Long id);
 
-    CartItemDto addProduct(CartItemDto CartItemDTO);
+    CartItemDto addCartItem(CartItemDto CartItemDTO);
 
-    CartItemDto updateProduct(Long id, CartItemDto CartItemDTO);
+    CartItemDto updateCartItem(Long id, CartItemDto CartItemDTO);
 
-    void deleteProduct(Long id);
+    void deleteCartItem(Long id);
 }

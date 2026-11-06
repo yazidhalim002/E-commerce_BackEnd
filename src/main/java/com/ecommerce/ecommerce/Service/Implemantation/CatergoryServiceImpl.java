@@ -8,28 +8,29 @@ import java.util.List;
 
 @Service
 public class CatergoryServiceImpl implements CategoryService {
+
     @Override
-    public List<CategoryDto> getAllProducts() {
+    public List<CategoryDto> getAllCategories() {
         return List.of();
     }
 
     @Override
-    public CategoryDto getProductById(Long id) {
+    public CategoryDto getCategoryById(Long id) {
         return null;
     }
 
     @Override
-    public CategoryDto addProduct(CategoryDto CategoryDTO) {
+    public CategoryDto addCategory(CategoryDto CategoryDTO) {
         return null;
     }
 
     @Override
-    public CategoryDto updateProduct(Long id, CategoryDto CategoryDTO) {
+    public CategoryDto updateCategory(Long id, CategoryDto CategoryDTO) {
         return null;
     }
 
     @Override
-    public void deleteProduct(Long id) {
+    public void deleteCategory(Long id) {
 
     }
 }

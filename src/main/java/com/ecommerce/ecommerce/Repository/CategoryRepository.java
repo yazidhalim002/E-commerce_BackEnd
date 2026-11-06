@@ -4,5 +4,5 @@ import com.ecommerce.ecommerce.DTO.CategoryDto;
 import com.ecommerce.ecommerce.Model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CategoryRepository extends JpaRepository<CategoryDto,Long> {
+public interface CategoryRepository extends JpaRepository<Category,Long> {
 }

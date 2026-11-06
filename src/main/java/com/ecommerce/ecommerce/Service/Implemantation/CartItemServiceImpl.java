@@ -8,28 +8,29 @@ import java.util.List;
 
 @Service
 public class CartItemServiceImpl implements CartItemService {
+
     @Override
-    public List<CartItemDto> getAllProducts() {
+    public List<CartItemDto> getAllCartItems() {
         return List.of();
     }
 
     @Override
-    public CartItemDto getProductById(Long id) {
+    public CartItemDto getCartItemById(Long id) {
         return null;
     }
 
     @Override
-    public CartItemDto addProduct(CartItemDto CartItemDTO) {
+    public CartItemDto addCartItem(CartItemDto CartItemDTO) {
         return null;
     }
 
     @Override
-    public CartItemDto updateProduct(Long id, CartItemDto CartItemDTO) {
+    public CartItemDto updateCartItem(Long id, CartItemDto CartItemDTO) {
         return null;
     }
 
     @Override
-    public void deleteProduct(Long id) {
+    public void deleteCartItem(Long id) {
 
     }
 }
