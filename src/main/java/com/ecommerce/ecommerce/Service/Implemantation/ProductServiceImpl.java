@@ -38,9 +38,9 @@ public class ProductServiceImpl implements ProductService {
         dto.setStockQuantity(product.getStockQuantity());
 
         if (product.getCategory() != null) {
-            dto.setCategory(product.getCategory());
+            dto.setCategoryId(product.getCategory().getId());
+            dto.setCategoryName(product.getCategory().getName());
         }
-
 
         return dto;
     }
@@ -54,8 +54,7 @@ public class ProductServiceImpl implements ProductService {
         product.setPrice(dto.getPrice());
         product.setStockQuantity(dto.getStockQuantity());
 
-
-        Category category = categoryRepository.findById(dto.getCategory().getId())
+        Category category = categoryRepository.findById(dto.getCategoryId())
                 .orElseThrow(() -> new RuntimeException("Category not found"));
 
         product.setCategory(category);
@@ -84,15 +83,17 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto updateProduct(Long id, ProductDto productDTO) {
-        Product product = productRepository.findById(id).orElseThrow(
-                ()-> new RuntimeException("product not found"));
 
-        product.setId(productDTO.getId());
-        product.setCategory(productDTO.getCategory());
-        product.setName(productDTO.getName());
-        product.setDescription(productDTO.getDescription());
-        product.setPrice(productDTO.getPrice());
-        product.setStockQuantity(productDTO.getStockQuantity());
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        Product updatedProduct = convertToEntity(productDTO);
+
+        product.setName(updatedProduct.getName());
+        product.setDescription(updatedProduct.getDescription());
+        product.setPrice(updatedProduct.getPrice());
+        product.setStockQuantity(updatedProduct.getStockQuantity());
+        product.setCategory(updatedProduct.getCategory());
 
         return convertToDto(productRepository.save(product));
     }

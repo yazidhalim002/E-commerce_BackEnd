@@ -3,6 +3,7 @@ package com.ecommerce.ecommerce.Service;
 import com.ecommerce.ecommerce.DTO.CategoryDto;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CategoryService {
     List<CategoryDto> getAllCategories();

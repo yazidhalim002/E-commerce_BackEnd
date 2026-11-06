@@ -1,7 +1,10 @@
 package com.ecommerce.ecommerce.DTO;
 
+import com.ecommerce.ecommerce.Model.Product;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -12,4 +15,5 @@ public class CategoryDto {
     @NotBlank
     private String name;
     private String description;
+    private List<Long> productIds;
 }

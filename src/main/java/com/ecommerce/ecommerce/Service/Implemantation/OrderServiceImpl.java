@@ -122,7 +122,8 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDto getOrderById(Long id) {
         return orderRepository.findById(id)
-                .map(this::convertToDto).orElseThrow(()-> new RuntimeException("Order not found"));
+                .map(this::convertToDto)
+                .orElseThrow(()-> new RuntimeException("Order not found"));
     }
 
     @Override
